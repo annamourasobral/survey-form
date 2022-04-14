@@ -2,58 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-    <title>Survey-form</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Survey-form</title>
 </head>
 
-<div class="container">
+<body class="container">
   <header class="header">
     <h1 id="title" class="text-center">How did you know me?</h1>
     <p id="description" class="description text-center">
-        Hello, you. Thank you for reaching my content, this survey-form is just a demonstration of
-        my work. But since you're here, please tell me, how did you know me?
+      Hello, you. Thank you for reaching my content, this survey-form is just a demonstration of
+      my work. But since you're here, please tell me, how did you know me?
     </p>
   </header>
   <form id="survey-form">
     <div class="form-group">
       <label id="name-label" for="name">Name</label>
-      <input
-        type="text"
-        name="name"
-        id="name"
-        class="form-control"
-        placeholder="Enter your name"
-        required
-      />
+      <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
     </div>
     <div class="form-group">
       <label id="email-label" for="email">Email</label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        class="form-control"
-        placeholder="Enter your Email"
-        required
-      />
+      <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
     </div>
     <div class="form-group">
-      <label id="number-label" for="number"
-        >Phone number<span class="clue">(optional)</span></label
-      >
-      <input
-        type="number"
-        name="phone"
-        id="number"
-        min=10
-        max=10
-        class="form-control"
-        placeholder="Your phone number"
-      />
+      <label id="number-label" for="number">Phone number<span class="clue">(optional)</span></label>
+      <input type="number" name="phone" id="number" min=10 max=10 class="form-control"
+        placeholder="Your phone number" />
     </div>
     <div class="form-group">
       <p>Which option best describes your current role?</p>
@@ -70,31 +47,11 @@
     <div class="form-group">
       <p>Which is your seniority?</p>
       <label>
-        <input
-          name="user-recommend"
-          value="intern"
-          type="radio"
-          class="input-radio"
-          checked
-        />Intern</label
-      >
+        <input name="user-recommend" value="intern" type="radio" class="input-radio" checked />Intern</label>
       <label>
-        <input
-          name="user-recommend"
-          value="junior"
-          type="radio"
-          class="input-radio"
-        />Junior</label
-      >
+        <input name="user-recommend" value="junior" type="radio" class="input-radio" />Junior</label>
 
-      <label
-        ><input
-          name="user-recommend"
-          value="senior"
-          type="radio"
-          class="input-radio"
-        />Senior</label
-      >
+      <label><input name="user-recommend" value="senior" type="radio" class="input-radio" />Senior</label>
     </div>
 
     <div class="form-group">
@@ -114,40 +71,17 @@
         <span class="clue">(Check all that apply)</span>
       </p>
 
-      <label
-        ><input
-          name="prefer"
-          value="front-end-projects"
-          type="checkbox"
-          class="input-checkbox"
-        />Front-end Projects</label
-      >
+      <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox" />Front-end
+        Projects</label>
       <label>
-        <input
-          name="prefer"
-          value="back-end-projects"
-          type="checkbox"
-          class="input-checkbox"
-        />Back-end Projects</label
-      >
-      <label
-        ><input
-          name="prefer"
-          value="challenges"
-          type="checkbox"
-          class="input-checkbox"
-        />Challenges</label
-      >
+        <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Back-end
+        Projects</label>
+      <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox" />Challenges</label>
     </div>
 
     <div class="form-group">
       <p>Any comments or suggestions?</p>
-      <textarea
-        id="comments"
-        class="input-textarea"
-        name="comment"
-        placeholder="Enter your comment here ;)"
-      ></textarea>
+      <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here ;)"></textarea>
     </div>
 
     <div class="form-group">
@@ -156,7 +90,8 @@
       </button>
     </div>
   </form>
-</div>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
 
 
 </html>
