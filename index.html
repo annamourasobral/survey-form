@@ -5,79 +5,158 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
     <title>Survey-form</title>
 </head>
 
-<body>
-    <form id="survey-form">
-        <h1 id="title">How did you know me?</h1>
-        <p id="description"> Hello, you. Thank you for reaching my content, this survey-form is just a demonstration of
-            my work. But since you're here, please tell me, how did you know me?
-        </p>
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">How did you know me?</h1>
+    <p id="description" class="description text-center">
+        Hello, you. Thank you for reaching my content, this survey-form is just a demonstration of
+        my work. But since you're here, please tell me, how did you know me?
+    </p>
+  </header>
+  <form id="survey-form">
+    <div class="form-group">
+      <label id="name-label" for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        placeholder="Enter your name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="email-label" for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter your Email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="number-label" for="number"
+        >Phone number<span class="clue">(optional)</span></label
+      >
+      <input
+        type="number"
+        name="phone"
+        id="number"
+        min=10
+        max=10
+        class="form-control"
+        placeholder="Your phone number"
+      />
+    </div>
+    <div class="form-group">
+      <p>Which option best describes your current role?</p>
+      <select id="dropdown" name="role" class="form-control" required>
+        <option disabled selected value>Select current role</option>
+        <option value="student">Student</option>
+        <option value="job">Full Time Job</option>
+        <option value="learner">Full Time Learner</option>
+        <option value="preferNo">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
 
-        <label id="name-label">
-            Name
-        </label>
-        <input id="name" name=”name” type="text" placeholder="Your Name" required>
-        <label id="email-label">
-            Email
-        </label>
-        <input id="email" type="email" placeholder="youremail@server.com" required>
-        <label id="number-label">
-            Phone
-        </label>
-        <input id="number" type="number" placeholder="(+55)5555 5555" min=10 max=10 required>
+    <div class="form-group">
+      <p>Which is your seniority?</p>
+      <label>
+        <input
+          name="user-recommend"
+          value="intern"
+          type="radio"
+          class="input-radio"
+          checked
+        />Intern</label
+      >
+      <label>
+        <input
+          name="user-recommend"
+          value="junior"
+          type="radio"
+          class="input-radio"
+        />Junior</label
+      >
 
-        <select class="form-select" id="dropdown" aria-label="Default select example">
-            <option selected>Open this menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
+      <label
+        ><input
+          name="user-recommend"
+          value="senior"
+          type="radio"
+          class="input-radio"
+        />Senior</label
+      >
+    </div>
 
-        <fieldset>
-            <legend>Radios</legend>
+    <div class="form-group">
+      <p>
+        Have you ever worked with me before
+      </p>
+      <select id="most-like" name="mostLike" class="form-control" required>
+        <option disabled selected value="no">Not yet</option>
+        <option value="few">A few times</option>
+        <option value="lot">A lot</option>
+      </select>
+    </div>
 
-            <div>
-                <input name="radio1" type="radio" value="radio1" checked>
-                <label>
-                    First radio
-                </label>
-            </div>
-            <div>
-                <input name="radio2" type="radio" id="gridRadios2" value="radio2">
-                <label>
-                    Second radio
-                </label>
-            </div>
-            <div>
-                <input name="radio3" type="radio" id="gridRadios3" value="radio3" disabled>
-                <label class="form-check-label" for="gridRadios3">
-                    Third disabled radio
-                </label>
-            </div>
-        </fieldset>
+    <div class="form-group">
+      <p>
+        What would you like to see improved?
+        <span class="clue">(Check all that apply)</span>
+      </p>
 
-        <input type="checkbox" value="check1">
-        <label>
-            Example checkbox 1
-        </label>
-        <input type="checkbox" value="check2">
-        <label>
-            Example checkbox 2
-        </label>
-        <input type="checkbox" value="check3">
-        <label>
-            Example checkbox 3
-        </label>
+      <label
+        ><input
+          name="prefer"
+          value="front-end-projects"
+          type="checkbox"
+          class="input-checkbox"
+        />Front-end Projects</label
+      >
+      <label>
+        <input
+          name="prefer"
+          value="back-end-projects"
+          type="checkbox"
+          class="input-checkbox"
+        />Back-end Projects</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="challenges"
+          type="checkbox"
+          class="input-checkbox"
+        />Challenges</label
+      >
+    </div>
 
-        <label>Example textarea</label>
-        <textarea rows="3"></textarea>
+    <div class="form-group">
+      <p>Any comments or suggestions?</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your comment here ;)"
+      ></textarea>
+    </div>
 
-        <button id="submit" type="submit">Submit</button>
-    </form>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
 
-</body>
 
 </html>
